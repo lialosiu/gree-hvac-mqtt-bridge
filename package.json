@@ -17,10 +17,6 @@
   "engines": {
     "node": ">=8.11.0"
   },
-  "os": [
-    "darwin",
-    "linux"
-  ],
   "private": true,
   "devDependencies": {
     "standard": "^12.0.1"

@@ -148,7 +148,7 @@ class Device {
 
     // If package type is response to handshake
     if (pack.t === 'dev') {
-      this._setDevice(message.cid, pack.name, rinfo.address, rinfo.port)
+      this._setDevice(message.cid ? message.cid : pack.mac, pack.name, rinfo.address, rinfo.port)
       this._sendBindRequest(this.device)
       return
     }
