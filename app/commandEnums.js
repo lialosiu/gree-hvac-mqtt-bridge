@@ -32,6 +32,10 @@ module.exports = {
   temperature: {
     code: 'SetTem'
   },
+  // temperature sensor
+  temperatureSensor: {
+    code: 'TemSen'
+  },
   // fan speed
   fanSpeed: {
     code: 'WdSpd',

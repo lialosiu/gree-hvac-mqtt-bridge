@@ -23,6 +23,7 @@ const mqttTopicPrefix = argv['mqtt-topic-prefix']
 
 const deviceState = {
   temperature: null,
+  temperatureSensor: null,
   fanSpeed: null,
   swingHor: null,
   swingVert: null,
@@ -54,6 +55,7 @@ const publishIfChanged = function (stateProp, newValue, mqttTopic) {
 const deviceOptions = {
   host: argv['hvac-host'],
   onStatus: (deviceModel) => {
+    publishIfChanged('temperatureSensor', deviceModel.props[commands.temperatureSensor.code].toString(), '/temperaturesensor/get')
     publishIfChanged('temperature', deviceModel.props[commands.temperature.code].toString(), '/temperature/get')
     publishIfChanged('fanSpeed', getKeyByValue(commands.fanSpeed.value, deviceModel.props[commands.fanSpeed.code]).toString(), '/fanspeed/get')
     publishIfChanged('swingHor', getKeyByValue(commands.swingHor.value, deviceModel.props[commands.swingHor.code]).toString(), '/swinghor/get')
