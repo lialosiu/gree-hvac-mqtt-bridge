@@ -64,7 +64,7 @@ climate:
     name: Gree HVAC
 
     # Change MQTT_TOPIC_PREFIX to what you've set in addon options
-    current_temperature_topic: "MQTT_TOPIC_PREFIX/temperature/get"
+    current_temperature_topic: "MQTT_TOPIC_PREFIX/temperaturesensor/get"
     temperature_command_topic: "MQTT_TOPIC_PREFIX/temperature/set"
     temperature_state_topic: "MQTT_TOPIC_PREFIX/temperature/get"
     mode_state_topic: "MQTT_TOPIC_PREFIX/mode/get"
